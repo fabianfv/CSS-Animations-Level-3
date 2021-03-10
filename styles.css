@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+body {
+  font-family: Lato, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: min(0.2em, 1vw);
+
+  margin: 0.5em 0;
+  height: 100vh;
+}
+
+div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 3.5vw;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+div::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 150vh;
+  background-color: white;
+  opacity: 10%;
+  transform: rotate(-30deg);
+  transition: transform 0.1s;
+}
+
+div:hover::before {
+  cursor: pointer;
+  transform: rotate(0);
+}
+
+.IT {
+  background-color: #244f75;
+}
+
+.A {
+  background-color: #60bfbf;
+}
+
+.CA {
+  background-color: #8c4b7e;
+}
+
+.DE {
+  background-color: #f8bb44;
+}
+
+.MY {
+  background-color: #f24b4b;
+}
+
+.fa-heart {
+  margin-left: 0.5em;
+}
