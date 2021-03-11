@@ -13,6 +13,7 @@ body {
 div {
   width: 100%;
   height: 100%;
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,6 +22,11 @@ div {
   color: white;
   position: relative;
   overflow: hidden;
+
+  transform: translateY(-110%);
+  animation-duration: 1000ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 }
 
 div::before {
@@ -31,7 +37,7 @@ div::before {
   background-color: white;
   opacity: 10%;
   transform: rotate(-30deg);
-  transition: transform 0.1s;
+  transition: transform 200ms;
 }
 
 div:hover::before {
@@ -41,22 +47,67 @@ div:hover::before {
 
 .IT {
   background-color: #244f75;
+  animation-name: left-right;
+}
+
+@keyframes left-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .A {
   background-color: #60bfbf;
+  animation-name: bottom-top;
+  animation-delay: 200ms;
+}
+
+@keyframes bottom-top {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 .CA {
   background-color: #8c4b7e;
+  animation-name: top-bottom;
+  animation-delay: 400ms;
+}
+
+@keyframes top-bottom {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 .DE {
   background-color: #f8bb44;
+  animation-name: bottom-top;
+  animation-delay: 600ms;
 }
 
 .MY {
   background-color: #f24b4b;
+  animation-name: right-left;
+  animation-delay: 800ms;
+}
+
+@keyframes right-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .fa-heart {
